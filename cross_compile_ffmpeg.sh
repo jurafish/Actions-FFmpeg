@@ -33,7 +33,7 @@ set_box_memory_size_bytes() {
   fi
 }
 
-function sortable_version { echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\n", $1,$2,$3,$4); }'; }
+function sortable_version() { echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\n", $1,$2,$3,$4); }'; }
 
 at_least_required_version() { # params: required actual
   local sortable_required=$(sortable_version $1)
