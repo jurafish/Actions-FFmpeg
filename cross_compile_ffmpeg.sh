@@ -144,8 +144,8 @@ check_missing_packages () {
     exit 1
   fi
   local meson_version=`meson --version`
-  if ! at_least_required_version "0.47" "${meson_version}"; then
-    echo "your meson version is too old $meson_version wanted 0.47"
+  if ! at_least_required_version "0.45" "${meson_version}"; then
+    echo "your meson version is too old $meson_version wanted 0.45"
     exit 1
   fi
   # also check missing "setup" so it's early LOL
